@@ -80,6 +80,11 @@ export class ToolbarComponent implements OnInit, OnDestroy
                 id   : 'tr',
                 title: 'Turkish',
                 flag : 'tr'
+            },
+            {
+                id   : 'ro',
+                title: 'Romanian',
+                flag : 'ro'
             }
         ];
 

@@ -1,13 +1,13 @@
 export const locale = {
-    lang: 'en',
+    lang: 'ro',
     data: {
         'NAV': {
-            'APPLICATIONS': 'Applications',
-            'DASHBOARDS'  : 'Dashboards',
-            'ADD-CLIENTS'  : 'Dashboards',
+            'APPLICATIONS': 'Aplicatii',
+            'DASHBOARDS'  : 'Panou de control',
+            'ADD-CLIENTS' : 'Adaugă clienţi',
             'CALENDAR'    : 'Calendar',
             'ECOMMERCE'   : 'E-Commerce',
-            'ACADEMY'     : 'Academy',
+            'ACADEMY'     : 'Academie',
             'MAIL'        : {
                 'TITLE': 'Mail',
                 'BADGE': '25'
@@ -17,8 +17,8 @@ export const locale = {
                 'BADGE': '13'
             },
             'CHAT'        : 'Chat',
-            'FILE_MANAGER': 'File Manager',
-            'CONTACTS'    : 'Contacts',
+            'FILE_MANAGER': 'Manager Fisiere',
+            'CONTACTS'    : 'Contacte',
             'TODO'        : 'To-Do',
             'SCRUMBOARD'  : 'Scrumboard'
         }
