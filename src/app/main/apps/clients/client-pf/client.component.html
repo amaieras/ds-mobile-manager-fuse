@@ -1,0 +1,143 @@
+<div id="client_pf" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg mat-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header mat-accent-bg" fxLayout="row" fxLayoutAlign="space-between center">
+
+            <!-- APP TITLE -->
+            <div fxLayout="row" fxLayoutAlign="start center">
+
+                <button mat-icon-button class="mr-0 mr-sm-16" [routerLink]="'/apps/clients/clients-pf'">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+
+                <!--<div class="client_pf-image mr-8 mr-sm-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">-->
+                    <!--<img *ngIf="client_pf.images[0]" [src]="client_pf.images[0].url">-->
+                    <!--<img *ngIf="!client_pf.images[0]" [src]="'assets/images/ecommerce/client_pf-image-placeholder.png'">-->
+                <!--</div>-->
+
+                <div fxLayout="column" fxLayoutAlign="start start"
+                     [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    <div class="h2" *ngIf="pageType ==='edit'">
+                        {{client_pf.lastname}}
+                    </div>
+                    <div class="h2" *ngIf="pageType ==='new'">
+                        New Client PF
+                    </div>
+                    <div class="subtitle secondary-text">
+                        <span>Client PF Detail</span>
+                    </div>
+                </div>
+            </div>
+            <!-- / APP TITLE -->
+
+            <button mat-raised-button
+                    class="save-client_pf-button mat-white-bg"
+                    [disabled]="clientPFForm.invalid"
+                    *ngIf="pageType ==='new'" (click)="addClientPF()">
+                <span>ADD</span>
+            </button>
+
+            <button mat-raised-button
+                    class="save-client_pf-button mat-white-bg"
+                    [disabled]="clientPFForm.invalid || clientPFForm.pristine"
+                    *ngIf="pageType ==='edit'" (click)="saveClientPF()">
+                <span>SAVE</span>
+            </button>
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card mat-white-bg">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <form name="clientPFForm" [formGroup]="clientPFForm" class="client_pf w-100-p" fxLayout="column" fxFlex>
+
+                    <mat-tab-group>
+
+                        <mat-tab label="Informatii generale">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+                                <div class="py-16" fxLayout="row">
+                                    <mat-form-field class="w-100-p">
+                                        <input matInput
+                                               name="lastname"
+                                               formControlName="lastname"
+                                               placeholder="Client PF Nume">
+                                    </mat-form-field>
+                                    <mat-form-field class="w-100-p">
+                                        <input matInput
+                                               name="firstname"
+                                               formControlName="firstname"
+                                               placeholder="Client PF Prenume">
+                                    </mat-form-field>
+                                </div>
+                                <div class="py-16" fxLayout="row">
+                                    <mat-form-field class="w-100-p">
+                                        <input matInput
+                                               name="phone"
+                                               formControlName="phone"
+                                               placeholder="Client PF Telefon"
+                                               required>
+                                    </mat-form-field>
+                                    <mat-form-field class="w-100-p">
+                                        <input matInput
+                                               name="email"
+                                               formControlName="email"
+                                               placeholder="Client PF Email">
+                                    </mat-form-field>
+                                    <mat-form-field class="w-100-p">
+                                        <input matInput
+                                               name="firm"
+                                               formControlName="firm"
+                                               placeholder="Client PF Firma">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Problema/Solicitare">
+                            <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+                                <app-phone-list></app-phone-list>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Preturi">
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Inventar">
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+
+
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Livrare">
+                            <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
+
+
+
+
+                            </div>
+                        </mat-tab>
+
+                    </mat-tab-group>
+                </form>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+</div>

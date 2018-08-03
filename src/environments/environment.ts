@@ -3,8 +3,24 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false,
-    hmr       : false
+    production    : false,
+    hmr           : false,
+    firebaseConfig: {
+        apiKey: 'AIzaSyDL-_f_lQb4dnkx6GRrL7O7L7sp2A1Kj1w',
+        authDomain: 'ds-mobile-dev.firebaseapp.com',
+        databaseURL: 'https://ds-mobile-dev.firebaseio.com',
+        projectId: 'ds-mobile-dev',
+        storageBucket: 'ds-mobile-dev.appspot.com',
+        messagingSenderId: '931169905269'
+    },
+    firebaseConfigProd: {
+        apiKey: 'AIzaSyAexP1Haz3RsxHqPX--XncgC1Rxef_wMDA',
+        authDomain: 'ds-mobile-prod.firebaseapp.com',
+        databaseURL: 'https://ds-mobile-prod.firebaseio.com',
+        projectId: 'ds-mobile-prod',
+        storageBucket: '',
+        messagingSenderId: '662623055885'
+    }
 };
 
 /*

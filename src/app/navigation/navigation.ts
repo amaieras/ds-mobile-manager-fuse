@@ -40,7 +40,7 @@ export const navigation: FuseNavigation[] = [
                         id   : 'pf',
                         title: 'PF',
                         type : 'item',
-                        url  : '/apps/clients/clientPF'
+                        url  : '/apps/clients/clients-pf'
                     },
                     {
                         id   : 'gsm',

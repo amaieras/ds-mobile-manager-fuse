@@ -7,16 +7,16 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseUtils } from '@fuse/utils';
 
-import { EcommerceProductsService } from 'app/main/apps/e-commerce/products/products.service';
 import { takeUntil } from 'rxjs/internal/operators';
+import {ClientsPFService} from './clients-pf.service';
 
 @Component({
-    selector   : 'e-commerce-products',
-    templateUrl: './products.component.html',
-    styleUrls  : ['./products.component.scss'],
+    selector   : 'app-clients-pf',
+    templateUrl: './clients-pf.component.html',
+    styleUrls  : ['./clients-pf.component.scss'],
     animations : fuseAnimations
 })
-export class EcommerceProductsComponent implements OnInit
+export class ClientsPFComponent implements OnInit
 {
     dataSource: FilesDataSource | null;
     displayedColumns = ['id', 'image', 'name', 'category', 'price', 'quantity', 'active'];
@@ -34,7 +34,7 @@ export class EcommerceProductsComponent implements OnInit
     private _unsubscribeAll: Subject<any>;
 
     constructor(
-        private _ecommerceProductsService: EcommerceProductsService
+        private _clientsPFService: ClientsPFService
     )
     {
         // Set the private defaults
@@ -50,7 +50,7 @@ export class EcommerceProductsComponent implements OnInit
      */
     ngOnInit(): void
     {
-        this.dataSource = new FilesDataSource(this._ecommerceProductsService, this.paginator, this.sort);
+        this.dataSource = new FilesDataSource(this._clientsPFService, this.paginator, this.sort);
         fromEvent(this.filter.nativeElement, 'keyup')
             .pipe(
                 takeUntil(this._unsubscribeAll),
@@ -76,19 +76,19 @@ export class FilesDataSource extends DataSource<any>
     /**
      * Constructor
      *
-     * @param {EcommerceProductsService} _ecommerceProductsService
+     * @param {ClientsPfService} _clientsPFService
      * @param {MatPaginator} _matPaginator
      * @param {MatSort} _matSort
      */
     constructor(
-        private _ecommerceProductsService: EcommerceProductsService,
+        private _clientsPFService: ClientsPFService,
         private _matPaginator: MatPaginator,
         private _matSort: MatSort
     )
     {
         super();
 
-        this.filteredData = this._ecommerceProductsService.products;
+        this.filteredData = this._clientsPFService.clientsPF;
     }
 
     /**
@@ -99,24 +99,22 @@ export class FilesDataSource extends DataSource<any>
     connect(): Observable<any[]>
     {
         const displayDataChanges = [
-            this._ecommerceProductsService.onProductsChanged,
+            this._clientsPFService.onClientsPFChanged,
             this._matPaginator.page,
             this._filterChange,
             this._matSort.sortChange
         ];
-
         return merge(...displayDataChanges)
             .pipe(
                 map(() => {
-                        let data = this._ecommerceProductsService.products.slice();
-
+                        let data = this._clientsPFService.clientsPF;
                         data = this.filterData(data);
 
                         this.filteredData = [...data];
 
                         data = this.sortData(data);
 
-                        // Grab the page's slice of data.
+                    // Grab the page's slice of data.
                         const startIndex = this._matPaginator.pageIndex * this._matPaginator.pageSize;
                         return data.splice(startIndex, this._matPaginator.pageSize);
                     }

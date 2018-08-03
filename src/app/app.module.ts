@@ -19,6 +19,9 @@ import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
 import { AppStoreModule } from 'app/store/store.module';
 import { LayoutModule } from 'app/layout/layout.module';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 const appRoutes: Routes = [
     {
@@ -46,6 +49,8 @@ const appRoutes: Routes = [
         redirectTo: 'apps/dashboards/analytics'
     }
 ];
+
+export const firebaseConfig = environment.firebaseConfig;
 
 @NgModule({
     declarations: [
@@ -79,7 +84,11 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
-        AppStoreModule
+        AppStoreModule,
+
+        // Firebase
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireDatabaseModule
     ],
     bootstrap   : [
         AppComponent

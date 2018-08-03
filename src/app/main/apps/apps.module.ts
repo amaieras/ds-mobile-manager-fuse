@@ -33,6 +33,10 @@ const routes = [
         loadChildren: './e-commerce/e-commerce.module#EcommerceModule'
     },
     {
+        path        : 'clients',
+        loadChildren: './clients/clients.module#ClientsModule'
+    },
+    {
         path        : 'academy',
         loadChildren: './academy/academy.module#AcademyModule'
     },

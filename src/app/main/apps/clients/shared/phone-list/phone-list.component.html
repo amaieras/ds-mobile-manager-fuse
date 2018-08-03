@@ -1,0 +1,56 @@
+<mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+</mat-card-header>
+<mat-card-content>
+    <!--<div class="tab-content p-24" fusePerfectScrollbar>-->
+    <div class="py-16" fxLayout="row">
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   placeholder="Alege Brandul"
+                   aria-label="Number"
+                   matInput
+                   [formControl]="phoneBrand"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   placeholder="Alege Modelul"
+                   aria-label="Number"
+                   matInput
+                   formControlName="phoneModel"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="w-100-p">
+            <input matInput
+                   name="imei"
+                   formControlName="imei"
+                   placeholder="Client PF IMEI">
+        </mat-form-field>
+        <mat-form-field class="w-100-p">
+            <input matInput
+                   name="phoneColor"
+                   formControlName="phoneColor"
+                   placeholder="Client PF Culoare">
+        </mat-form-field>
+        <mat-form-field class="w-100-p">
+            <input matInput
+                   name="phoneCode"
+                   formControlName="phoneCode"
+                   placeholder="Client PF Cod Telefon">
+        </mat-form-field>
+    </div>
+    <!--</div>-->
+</mat-card-content>
+<mat-card-actions>
+    <button mat-button>Adauga alt telefon +</button>
+</mat-card-actions>
