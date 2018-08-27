@@ -1,4 +1,4 @@
-<div id="client_pf" class="page-layout carded fullwidth inner-scroll">
+<div id="clientPF" class="page-layout carded fullwidth inner-scroll">
 
     <!-- TOP BACKGROUND -->
     <div class="top-bg mat-accent-bg"></div>
@@ -25,7 +25,7 @@
                 <div fxLayout="column" fxLayoutAlign="start start"
                      [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
                     <div class="h2" *ngIf="pageType ==='edit'">
-                        {{client_pf.lastname}}
+                        {{clientPF.lastname}}
                     </div>
                     <div class="h2" *ngIf="pageType ==='new'">
                         New Client PF
@@ -100,12 +100,27 @@
                                                formControlName="firm"
                                                placeholder="Client PF Firma">
                                     </mat-form-field>
+                                    <mat-form-field class="example-full-width">
+                                        <input type="text"
+                                               placeholder="Cum a aflat de noi?"
+                                               aria-label="Number"
+                                               matInput
+                                               [formControl]="aboutUs"
+                                               [matAutocomplete]="auto"
+                                                required>
+                                        <mat-autocomplete #auto="matAutocomplete">
+                                            <mat-option *ngFor="let option of aboutUsFilteredOptions | async" [value]="option">
+                                                {{option}}
+                                            </mat-option>
+                                            <mat-error *ngIf="aboutUs.hasError('required')">You must make a selection</mat-error>
+                                        </mat-autocomplete>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </mat-tab>
                         <mat-tab label="Problema/Solicitare">
                             <div class="tab-content p-24" fusePerfectScrollbar fxLayout="column">
-                                <app-phone-list></app-phone-list>
+                                <app-phone-list [phoneListForm]="clientPFForm"></app-phone-list>
                             </div>
                         </mat-tab>
                         <mat-tab label="Preturi">
