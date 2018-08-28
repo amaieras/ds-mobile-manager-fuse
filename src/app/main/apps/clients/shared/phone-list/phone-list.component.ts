@@ -17,7 +17,7 @@ export class PhoneListComponent implements OnInit, OnDestroy {
     phoneModel = new FormControl();
 
     options: string[] = ["One", "Two", "Three"];
-
+    selected = "no";
     brandFilteredOptions: Observable<string[]>;
     modelFilteredOptions: Observable<string[]>;
 
