@@ -137,23 +137,25 @@ export class ClientPFComponent implements OnInit, OnDestroy
      */
     addClientPF(): void
     {
-        const data = this.clientPFForm.getRawValue();
-        data.handle = FuseUtils.handleize(data.name);
-
-        this._clientPFService.addProduct(data)
-            .then(() => {
-
-                // Trigger the subscription with new data
-                this._clientPFService.onClientPFChanged.next(data);
-
-                // Show the success message
-                this._matSnackBar.open('Product added', 'OK', {
-                    verticalPosition: 'top',
-                    duration        : 2000
-                });
-
-                // Change the location with new one
-                // this._location.go('apps/e-commerce/products/' + this.clientPF.id + '/' + this.clientPF.handle);
-            });
+        this._clientPFService.addData();
     }
+    //     const data = this.clientPFForm.getRawValue();
+    //     data.handle = FuseUtils.handleize(data.name);
+    //
+    //     this._clientPFService.addProduct(data)
+    //         .then(() => {
+    //
+    //             // Trigger the subscription with new data
+    //             this._clientPFService.onClientPFChanged.next(data);
+    //
+    //             // Show the success message
+    //             this._matSnackBar.open('Product added', 'OK', {
+    //                 verticalPosition: 'top',
+    //                 duration        : 2000
+    //             });
+    //
+    //             // Change the location with new one
+    //             // this._location.go('apps/e-commerce/products/' + this.clientPF.id + '/' + this.clientPF.handle);
+    //         });
+    // }
 }

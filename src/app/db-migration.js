@@ -788,13 +788,332 @@ let data = {
                 "name" : "S9",
                 "phoneId" : "samsung"
             }
+        },
+        "problems-list" : {
+            "-KwS97entgXWOcycWmuF" : {
+                "name" : "Altele"
+            },
+            "-KwS97entgXWOcycwmuF" : {
+                "name" : "Sticla"
+            },
+            "-KwSBt9Iu--fsCFSX8YC" : {
+                "name" : "Manopera Display"
+            },
+            "-KwSCTPyM9ekuU5ieyU0" : {
+                "name" : "Vanzare Display"
+            },
+            "-KyoSrZyHhSPh45ssDvh" : {
+                "name" : "MICROFON"
+            },
+            "-Kyym_y9HeWAOqQbX3vI" : {
+                "name" : "PORT SIM"
+            },
+            "-Kz3JlTxYI5XVv0qe0Bj" : {
+                "name" : "NU PORNESTE"
+            },
+            "-Kz4LVn1e56ohJ60j2oj" : {
+                "name" : "SOFT"
+            },
+            "-Kz4LVn378gbpWR5f67_" : {
+                "name" : "FOLIE"
+            },
+            "-Kz81VcLvf2-50EQTIc7" : {
+                "name" : "CURATARE PLACA DE BAZA"
+            },
+            "-KzSd0fKbCB9AWy2KTtZ" : {
+                "name" : "PORT INCARCARE"
+            },
+            "-KzSqpYrfZc5_HGdLAs4" : {
+                "name" : "BATERIE"
+            },
+            "-KzSvmN9amNo55Yp4f33" : {
+                "name" : "CAPAC SPATE"
+            },
+            "-KzY2vNE1Gpexx785Sgz" : {
+                "name" : "ORNAMENT CAMERA"
+            },
+            "-Kzi3v1WZVE5yXDRc7KW" : {
+                "name" : "BUTOANE +-"
+            },
+            "-KzxhBVqIPNniBcB4tA3" : {
+                "name" : "carcasa"
+            },
+            "-KzxhBVusDESiYWtI-A1" : {
+                "name" : "flex senzori prox"
+            },
+            "-Kzy-ma-BkiMrAtWMJlk" : {
+                "name" : "MUFA INCARCARE"
+            },
+            "-L-0vv6t227e_24TcnGn" : {
+                "name" : "A LUAT APA"
+            },
+            "-L-WI3n1zcLQ6Di-vuqy" : {
+                "name" : "MUTARE DATE"
+            },
+            "-L-a44nk1LzTdJ3OBrtv" : {
+                "name" : "RAMA"
+            },
+            "-L-f3HKb-zq-KCPiqVvT" : {
+                "name" : "DIFUZOR"
+            },
+            "-L-lCQiQ2Xic0kMwWoBc" : {
+                "name" : "FOLIE STICLA N4"
+            },
+            "-L-lCQi_5T9NgDLM9nMT" : {
+                "name" : "FOLIE  S7 EDGE"
+            },
+            "-L09AnzL9I_DzYkirk6Z" : {
+                "name" : "PLACA BAZA?"
+            },
+            "-L09sSsHlu9nN_3NcFgz" : {
+                "name" : "TRANSFER DATE"
+            },
+            "-L0F6EoFUGkxPfU4mfey" : {
+                "name" : "POWER BUTTON"
+            },
+            "-L0csXerSlFhhnHXuwyW" : {
+                "name" : "PLACA BAZA"
+            },
+            "-L0d09IwJOeLURLpylA5" : {
+                "name" : "-"
+            },
+            "-L0ioXMWev-tA4sXNWNZ" : {
+                "name" : "camera fata"
+            },
+            "-L0xwhWZutqkxbdkaWso" : {
+                "name" : "avans telefon"
+            },
+            "-L12VCuAFYPtcDuIrGP_" : {
+                "name" : "CURATARE USB"
+            },
+            "-L1RAEvGNog-hrgNTVyI" : {
+                "name" : "BUTON HOME"
+            },
+            "-L1SrqACUBnS99wpU_4g" : {
+                "name" : "SALVARE DATE"
+            },
+            "-L20MiCghTqmYa0P3Ckb" : {
+                "name" : "TASTATURA"
+            },
+            "-L24Jevn5nzALS657gRi" : {
+                "name" : "MANOPERA "
+            },
+            "-L24dqxoO3D6gI5yjRvl" : {
+                "name" : "RAMANE BLOCAT PE O IMAGINE"
+            },
+            "-L2tSl8ijloJlz1Rn47T" : {
+                "name" : "CASCA"
+            },
+            "-L2teJ3wgGNccYKLqTqp" : {
+                "name" : "piesa placa"
+            },
+            "-L2tfTfA_NILw_RPPiYC" : {
+                "name" : "MANOPERA MUTARE PIESE"
+            },
+            "-L2u3_qUKZs88wBAmaRf" : {
+                "name" : "REZERVARE TEL"
+            },
+            "-L2uQU_DBVCA1aqv6bbT" : {
+                "name" : "VANZARE INCARCATOR"
+            },
+            "-L3T0tvQ9e-BM2e2CiJz" : {
+                "name" : "RETUR"
+            },
+            "-L5Nt75-rTj5HN0bspnF" : {
+                "name" : "CABLU DATE "
+            },
+            "-L5Nt759pWAipTYLy4jz" : {
+                "name" : "INCARCATOR"
+            },
+            "-L5iX1D54K2j0ZMtgVAY" : {
+                "name" : "0"
+            },
+            "-L5mE99izX3qQ2pLApC-" : {
+                "name" : " MODUL WI FI"
+            },
+            "-L5n44k2V9eQ_liNGVDE" : {
+                "name" : "vibra"
+            },
+            "-L5n44k8sLXqlgG5DP6c" : {
+                "name" : "hotspot"
+            },
+            "-L5n44k9GfLjHdVM3nYF" : {
+                "name" : "curatare difuzor"
+            },
+            "-L5wmWNmdqzxl3snAw0K" : {
+                "name" : "SEMNAL"
+            },
+            "-L6LPZ2HtiImJIHQhk47" : {
+                "name" : "000"
+            },
+            "-L6N-rth9cUIwSwfhLDT" : {
+                "name" : "capac"
+            },
+            "-L6Rg-yQSwX2y5-AJtJv" : {
+                "name" : "HUSA"
+            },
+            "-L8C7AniCerp8ySJtDHJ" : {
+                "name" : "se reseteaza"
+            },
+            "-L8WTYkf0pNSXtuJw1s-" : {
+                "name" : "camera spate"
+            },
+            "-L8r3gTPtiMo0BgFfgPT" : {
+                "name" : "backlight"
+            },
+            "-L99Y9mcWsFhQ6RIrrh_" : {
+                "name" : "VANZARE TELEFON"
+            },
+            "-L99Yl7XNrb72wlWa9GR" : {
+                "name" : "CABLU INCARCATOR"
+            },
+            "-LACHnsBI5NZ33u281_w" : {
+                "name" : "avans"
+            },
+            "-LACLDqOBYnCOC8Odx0r" : {
+                "name" : "arse"
+            },
+            "-LACLDqR0awu1e7aYgSr" : {
+                "name" : "spart/pata"
+            },
+            "-LACQ50Mpl5EoN3xi-K3" : {
+                "name" : "PRIZA USB FAST"
+            },
+            "-LACfRxbXTyV2gO8ndK9" : {
+                "name" : "sticla spate"
+            },
+            "-LAlGa5j1rlPTxbIIYAN" : {
+                "name" : "constatare"
+            },
+            "-LBV1rdZn3eZCHTU5wN-" : {
+                "name" : "cartela"
+            },
+            "-LCXjXY0zbKb5LauqjbZ" : {
+                "name" : "sunet"
+            },
+            "-LCmrQwTOwXMzFob8pv5" : {
+                "name" : "MUTARE PLACA BAZA"
+            },
+            "-LEiHc57md5I2mWnTVDw" : {
+                "name" : "recuperare date"
+            },
+            "-LFbvVCfAiGQfcCe0VWO" : {
+                "name" : "touch"
+            },
+            "-LH3KJYPeMkczxWAO2Ly" : {
+                "name" : "USITA SIM"
+            },
+            "-LHYVo7HE8K71taXQ8Gn" : {
+                "name" : "priza usb"
+            },
+            "-LHc0C3r1uCWgYqhAHvZ" : {
+                "name" : "CITITOR CARD "
+            },
+            "-LHgArdXoPQw9DLnpAuZ" : {
+                "name" : "LIPIRE DISPLAY IN RAMA "
+            },
+            "-LK1xga40BteHi_x4rCx" : {
+                "name" : "sticla camera spate"
+            }
+        },
+        "aboutus-list" : {
+            "-KxJzAfLnrbOIqE6NW8o" : {
+                "name" : "Altele"
+            },
+            "-KxJzAfLnrbOIqdwNW8o" : {
+                "name" : "GOOGLE"
+            },
+            "-KxJzIf9Riu-JRKtZIb2" : {
+                "name" : "FACEBOOK"
+            },
+            "-KxKR1DRLvRPiUp-p-D3" : {
+                "name" : "OLX"
+            },
+            "-KxNn5EsFBDlv0kW4d8z" : {
+                "name" : "RECOMANDARE"
+            },
+            "-KyoViev8yRLEDqtc09q" : {
+                "name" : "A MAI FOST"
+            },
+            "-KyuBW1YRfBs5c2A-d4p" : {
+                "id" : 6,
+                "name" : "STRADA"
+            },
+            "-Kyym_yAvwLbP0ljiCof" : {
+                "id" : 7,
+                "name" : "INCREMENTAL"
+            },
+            "-Kz2hCSSn4N2p9Tg-bpJ" : {
+                "id" : 8,
+                "name" : "EUGEN"
+            },
+            "-Kz2nzmhupEfMI9mKty4" : {
+                "id" : 9,
+                "name" : "INCREMEN"
+            },
+            "-Kz4LVn378gbpWR5f67a" : {
+                "id" : 10,
+                "name" : "CRISTI"
+            },
+            "-KzOuoOmSPkEMvmUnkVC" : {
+                "name" : "ORANGE"
+            },
+            "-KzcCRsZ6wEyvQ_-oQLm" : {
+                "name" : "ONUFREI"
+            },
+            "-Kzi3v1X47jfXBn9RLly" : {
+                "name" : "RICARDO MI"
+            },
+            "-KziFzvIOv6CHEGcuXsJ" : {
+                "name" : "REC CRISTI"
+            },
+            "-L-f3HKph-RhYZJdc6kE" : {
+                "name" : "REC. FLORIN"
+            },
+            "-L09PdG7cryMep0penMj" : {
+                "name" : "OANA"
+            },
+            "-L0ADEA475dZSFeAayFD" : {
+                "name" : "ALICE"
+            },
+            "-L0E1Y0VT0_6MkO3DzCI" : {
+                "name" : "RECOMANDARE CLIENT"
+            },
+            "-L1RtM4FUvc5FzKgdZd5" : {
+                "name" : "WIZZ MOBILE"
+            },
+            "-L20fK7QXcPINSdIFUKR" : {
+                "name" : "HELLA"
+            },
+            "-L4f-HW_UM4FhQO276Ko" : {
+                "name" : "COLET DIN TARA"
+            },
+            "-L58NHyclMX885JguQgR" : {
+                "name" : "?"
+            },
+            "-L9orcYJQso9yFI2Ox7J" : {
+                "name" : "TMD"
+            },
+            "-LJDKQkVVeVMZrxZjSqW" : {
+                "name" : "INSTAGRAM"
+            },
+            "-LLddUmQDuN2AkH-Lho4" : {
+                "name" : "GALERIA"
+            }
         }
     }
 }
 const brandKeys = Object.keys(data.phones.phoneBrands);
 const modelKeys = Object.keys(data.phones.phoneModels);
+const problemKeys = Object.keys(data.phones['problems-list']);
+const aboutUsKeys = Object.keys(data.phones['aboutus-list']);
+
+
 const brands = [];
 const models = [];
+const problems = [];
+const aboutUs = [];
+
 const modelsObj = {};
 brandKeys.forEach(item => {
     brands.push(data.phones.phoneBrands[item].name);
@@ -802,16 +1121,31 @@ brandKeys.forEach(item => {
 modelKeys.forEach(item => {
     models.push(data.phones.phoneModels[item]);
 })
+
+problemKeys.forEach(item => {
+    problems.push(data.phones['problems-list'][item].name)
+})
+
+aboutUsKeys.forEach(item => {
+    aboutUs.push(data.phones['aboutus-list'][item].name)
+})
 models.map(item => {
     modelsObj[item.phoneId] = [];
-    const filteredItems = models.filter(model => {
-        return model.phoneId.toLowerCase() === item.phoneId.toLowerCase();
-    });
-    filteredItems.forEach(filteredItem => {
-        if (modelsObj[filteredItem.phoneId] !== undefined) {
-            modelsObj[filteredItem.phoneId].push(filteredItem.name);
-        }
-    });
+const filteredItems = models.filter(model => {
+    return model.phoneId.toLowerCase() === item.phoneId.toLowerCase();
+});
+filteredItems.forEach(filteredItem => {
+    if (modelsObj[filteredItem.phoneId] !== undefined) {
+    modelsObj[filteredItem.phoneId].push(filteredItem.name);
+}
+});
 })
-console.log(modelsObj['iphone']);
-document.getElementById('data').innerText = modelsObj['iphone'];
+
+console.log(models)
+
+let modelsName = []
+aboutUs.forEach(model => {
+    modelsName.push(model)
+})
+
+document.getElementById('data').innerText = modelsName;

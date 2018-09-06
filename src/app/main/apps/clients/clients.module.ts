@@ -36,6 +36,7 @@ import {ClientsPFService} from '../clients/clients-pf/clients-pf.service';
 import {ClientPFComponent} from '../clients/client-pf/client.component';
 import {ClientPFService} from '../clients/client-pf/client.service';
 import {PhoneListComponent} from './shared/phone-list/phone-list.component';
+import {AngularFirestore} from "angularfire2/firestore";
 
 const routes: Routes = [
     {
@@ -75,6 +76,7 @@ const routes: Routes = [
         PhoneListComponent,
         ClientsPFComponent,
         ClientPFComponent,
+        PhoneListComponent,
         EcommerceProductComponent,
         EcommerceOrdersComponent,
         EcommerceOrderComponent
@@ -106,7 +108,8 @@ const routes: Routes = [
     ],
     providers   : [
         ClientsPFService,
-        ClientPFService
+        ClientPFService,
+        AngularFirestore
     ]
 })
 export class ClientsModule
