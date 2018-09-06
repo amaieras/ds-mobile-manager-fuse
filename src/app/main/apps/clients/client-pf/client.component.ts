@@ -1,21 +1,22 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Location } from '@angular/common';
-import { MatSnackBar } from '@angular/material';
-import {Observable, Subject} from 'rxjs';
-import {map, startWith, takeUntil} from 'rxjs/operators';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from "@angular/core";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Location } from "@angular/common";
+import { MatSnackBar } from "@angular/material";
+import {Observable, Subject} from "rxjs";
+import {map, startWith, takeUntil} from "rxjs/operators";
 
-import { fuseAnimations } from '@fuse/animations';
-import { FuseUtils } from '@fuse/utils';
+import { fuseAnimations } from "@fuse/animations";
+import { FuseUtils } from "@fuse/utils";
 
-import {ClientPF} from './client-pf.model';
-import {ClientPFService} from './client.service';
-import {FormControl} from '@angular/forms';
+import {ClientPF} from "./client-pf.model";
+import {ClientPFService} from "./client.service";
+import {FormControl} from "@angular/forms";
+import {ClientUtilService} from "../shared/client-util.service";
 
 @Component({
-    selector     : 'app-client-pf',
-    templateUrl  : './client.component.html',
-    styleUrls    : ['./client.component.scss'],
+    selector     : "app-client-pf",
+    templateUrl  : "./client.component.html",
+    styleUrls    : ["./client.component.scss"],
     encapsulation: ViewEncapsulation.None,
     animations   : fuseAnimations
 })
@@ -24,6 +25,11 @@ export class ClientPFComponent implements OnInit, OnDestroy
     clientPF: ClientPF;
     pageType: string;
     clientPFForm: FormGroup;
+
+    aboutUsOptions: string[];
+
+    aboutUs = new FormControl("FACEBOOK");
+    aboutUsFilteredOptions: Observable<string[]>;
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -40,7 +46,8 @@ export class ClientPFComponent implements OnInit, OnDestroy
         private _clientPFService: ClientPFService,
         private _formBuilder: FormBuilder,
         private _location: Location,
-        private _matSnackBar: MatSnackBar
+        private _matSnackBar: MatSnackBar,
+        private _clientUtilService: ClientUtilService
     )
     {
         // Set the default
@@ -59,24 +66,39 @@ export class ClientPFComponent implements OnInit, OnDestroy
      */
     ngOnInit(): void
     {
+
+
         // Subscribe to update product on changes
         this._clientPFService.onClientPFChanged
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe(clientPF => {
-
                 if ( clientPF )
                 {
                     this.clientPF = new ClientPF(clientPF);
-                    this.pageType = 'edit';
+                    this.pageType = "edit";
                 }
                 else
                 {
-                    this.pageType = 'new';
+                    this.pageType = "new";
                     this.clientPF = new ClientPF();
                 }
+                this._clientUtilService.getAboutUsList().subscribe(doc => {
+                    this.aboutUsOptions = doc["aboutUsList"];
+                    this.aboutUsFilteredOptions = this.aboutUs.valueChanges
+                        .pipe(
+                            startWith(""),
+                            map(value => this._filter(value))
+                        );
+                });
 
                 this.clientPFForm = this.createClientPFForm();
             });
+    }
+
+    private _filter(value: string): string[] {
+        const filterValue = value.toLowerCase();
+
+        return this.aboutUsOptions.filter(option => option.toLowerCase().includes(filterValue));
     }
     /**
      * On destroy
@@ -106,7 +128,8 @@ export class ClientPFComponent implements OnInit, OnDestroy
             email              : [this.clientPF.email],
             firm               : [this.clientPF.firm],
             phone              : [this.clientPF.phone],
-            phoneList         :  [this._formBuilder.array([])]
+            aboutUs            : [this.clientPF.aboutUs],
+            phoneList          : [this._formBuilder.array([])]
         });
     }
 
@@ -125,8 +148,8 @@ export class ClientPFComponent implements OnInit, OnDestroy
                 this._clientPFService.onClientPFChanged.next(data);
 
                 // Show the success message
-                this._matSnackBar.open('Product saved', 'OK', {
-                    verticalPosition: 'top',
+                this._matSnackBar.open("Product saved", "OK", {
+                    verticalPosition: "top",
                     duration        : 2000
                 });
             });
@@ -137,7 +160,28 @@ export class ClientPFComponent implements OnInit, OnDestroy
      */
     addClientPF(): void
     {
+<<<<<<< HEAD
         this._clientPFService.addData();
+=======
+        const data = this.clientPFForm.getRawValue();
+        data.handle = FuseUtils.handleize(data.name);
+
+        this._clientPFService.addProduct(data)
+            .then(() => {
+
+                // Trigger the subscription with new data
+                this._clientPFService.onClientPFChanged.next(data);
+
+                // Show the success message
+                this._matSnackBar.open("Product added", "OK", {
+                    verticalPosition: "top",
+                    duration        : 2000
+                });
+
+                // Change the location with new one
+                // this._location.go('apps/e-commerce/products/' + this.clientPF.id + '/' + this.clientPF.handle);
+            });
+>>>>>>> origin/development
     }
     //     const data = this.clientPFForm.getRawValue();
     //     data.handle = FuseUtils.handleize(data.name);

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 import {
     MatAutocomplete, MatAutocompleteModule,
     MatButtonModule, MatCardModule,
@@ -14,13 +14,14 @@ import {
     MatSortModule,
     MatTableModule,
     MatTabsModule
-} from '@angular/material';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { AgmCoreModule } from '@agm/core';
+} from "@angular/material";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { AgmCoreModule } from "@agm/core";
 
-import { FuseSharedModule } from '@fuse/shared.module';
-import { FuseWidgetModule } from '@fuse/components/widget/widget.module';
+import { FuseSharedModule } from "@fuse/shared.module";
+import { FuseWidgetModule } from "@fuse/components/widget/widget.module";
 
+<<<<<<< HEAD
 import { EcommerceDashboardComponent } from 'app/main/apps/e-commerce/dashboard/dashboard.component';
 import { EcommerceDashboardService } from 'app/main/apps/e-commerce/dashboard/dashboard.service';
 import { EcommerceProductsComponent } from 'app/main/apps/e-commerce/products/products.component';
@@ -37,31 +38,45 @@ import {ClientPFComponent} from '../clients/client-pf/client.component';
 import {ClientPFService} from '../clients/client-pf/client.service';
 import {PhoneListComponent} from './shared/phone-list/phone-list.component';
 import {AngularFirestore} from "angularfire2/firestore";
+=======
+import { EcommerceDashboardComponent } from "app/main/apps/e-commerce/dashboard/dashboard.component";
+import { EcommerceDashboardService } from "app/main/apps/e-commerce/dashboard/dashboard.service";
+import { EcommerceProductsComponent } from "app/main/apps/e-commerce/products/products.component";
+import { EcommerceProductsService } from "app/main/apps/e-commerce/products/products.service";
+import { EcommerceProductComponent } from "app/main/apps/e-commerce/product/product.component";
+import { EcommerceOrdersComponent } from "app/main/apps/e-commerce/orders/orders.component";
+import { EcommerceOrderComponent } from "app/main/apps/e-commerce/order/order.component";
+import {ClientsPFComponent} from "../clients/clients-pf/clients-pf.component";
+import {ClientsPFService} from "../clients/clients-pf/clients-pf.service";
+import {ClientPFComponent} from "../clients/client-pf/client.component";
+import {ClientPFService} from "../clients/client-pf/client.service";
+import {PhoneListComponent} from "./shared/phone-list/phone-list.component";
+>>>>>>> origin/development
 
 const routes: Routes = [
     {
-        path     : 'dashboard',
+        path     : "dashboard",
         component: EcommerceDashboardComponent,
         resolve  : {
             data: EcommerceDashboardService
         }
     },
     {
-        path     : 'products',
+        path     : "products",
         component: EcommerceProductsComponent,
         resolve  : {
             data: EcommerceProductsService
         }
     },
     {
-        path     : 'clients-pf',
+        path     : "clients-pf",
         component: ClientsPFComponent,
         resolve  : {
             data: ClientsPFService
         }
     },
     {
-        path     : 'clients-pf/:id',
+        path     : "clients-pf/:id",
         component: ClientPFComponent,
         resolve  : {
             data: ClientPFService
@@ -100,7 +115,7 @@ const routes: Routes = [
         MatCardModule,
         NgxChartsModule,
         AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8'
+            apiKey: "AIzaSyD81ecsCj4yYpcXSLFcYU97PvRsE_X8Bx8"
         }),
 
         FuseSharedModule,

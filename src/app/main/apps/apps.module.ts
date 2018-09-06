@@ -1,60 +1,64 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { FuseSharedModule } from '@fuse/shared.module';
+import { FuseSharedModule } from "@fuse/shared.module";
 
 const routes = [
     {
-        path        : 'dashboards/analytics',
-        loadChildren: './dashboards/analytics/analytics.module#AnalyticsDashboardModule'
+        path        : "dashboards/analytics",
+        loadChildren: "./dashboards/analytics/analytics.module#AnalyticsDashboardModule"
     },
     {
-        path        : 'dashboards/project',
-        loadChildren: './dashboards/project/project.module#ProjectDashboardModule'
+        path        : "dashboards/project",
+        loadChildren: "./dashboards/project/project.module#ProjectDashboardModule"
     },
     {
-        path        : 'mail',
-        loadChildren: './mail/mail.module#MailModule'
+        path        : "mail",
+        loadChildren: "./mail/mail.module#MailModule"
     },
     {
-        path        : 'mail-ngrx',
-        loadChildren: './mail-ngrx/mail.module#MailNgrxModule'
+        path        : "mail-ngrx",
+        loadChildren: "./mail-ngrx/mail.module#MailNgrxModule"
     },
     {
-        path        : 'chat',
-        loadChildren: './chat/chat.module#ChatModule'
+        path        : "chat",
+        loadChildren: "./chat/chat.module#ChatModule"
     },
     {
-        path        : 'calendar',
-        loadChildren: './calendar/calendar.module#CalendarModule'
+        path        : "calendar",
+        loadChildren: "./calendar/calendar.module#CalendarModule"
     },
     {
-        path        : 'e-commerce',
-        loadChildren: './e-commerce/e-commerce.module#EcommerceModule'
+        path        : "e-commerce",
+        loadChildren: "./e-commerce/e-commerce.module#EcommerceModule"
     },
     {
-        path        : 'clients',
-        loadChildren: './clients/clients.module#ClientsModule'
+        path        : "clients",
+        loadChildren: "./clients/clients.module#ClientsModule"
     },
     {
-        path        : 'academy',
-        loadChildren: './academy/academy.module#AcademyModule'
+        path        : "parts",
+        loadChildren: "./parts/parts.module#PartsModule"
     },
     {
-        path        : 'todo',
-        loadChildren: './todo/todo.module#TodoModule'
+        path        : "academy",
+        loadChildren: "./academy/academy.module#AcademyModule"
     },
     {
-        path        : 'file-manager',
-        loadChildren: './file-manager/file-manager.module#FileManagerModule'
+        path        : "todo",
+        loadChildren: "./todo/todo.module#TodoModule"
     },
     {
-        path        : 'contacts',
-        loadChildren: './contacts/contacts.module#ContactsModule'
+        path        : "file-manager",
+        loadChildren: "./file-manager/file-manager.module#FileManagerModule"
     },
     {
-        path        : 'scrumboard',
-        loadChildren: './scrumboard/scrumboard.module#ScrumboardModule'
+        path        : "contacts",
+        loadChildren: "./contacts/contacts.module#ContactsModule"
+    },
+    {
+        path        : "scrumboard",
+        loadChildren: "./scrumboard/scrumboard.module#ScrumboardModule"
     }
 ];
 

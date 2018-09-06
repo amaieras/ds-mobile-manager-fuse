@@ -1,25 +1,25 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
-import { DataSource } from '@angular/cdk/collections';
-import { merge, Observable, BehaviorSubject, fromEvent, Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { MatPaginator, MatSort } from "@angular/material";
+import { DataSource } from "@angular/cdk/collections";
+import { merge, Observable, BehaviorSubject, fromEvent, Subject } from "rxjs";
+import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
 
-import { fuseAnimations } from '@fuse/animations';
-import { FuseUtils } from '@fuse/utils';
+import { fuseAnimations } from "@fuse/animations";
+import { FuseUtils } from "@fuse/utils";
 
-import { takeUntil } from 'rxjs/internal/operators';
-import {ClientsPFService} from './clients-pf.service';
+import { takeUntil } from "rxjs/internal/operators";
+import {ClientsPFService} from "./clients-pf.service";
 
 @Component({
-    selector   : 'app-clients-pf',
-    templateUrl: './clients-pf.component.html',
-    styleUrls  : ['./clients-pf.component.scss'],
+    selector   : "app-clients-pf",
+    templateUrl: "./clients-pf.component.html",
+    styleUrls  : ["./clients-pf.component.scss"],
     animations : fuseAnimations
 })
 export class ClientsPFComponent implements OnInit
 {
     dataSource: FilesDataSource | null;
-    displayedColumns = ['id', 'image', 'name', 'category', 'price', 'quantity', 'active'];
+    displayedColumns = ["id", "image", "name", "category", "price", "quantity", "active"];
 
     @ViewChild(MatPaginator)
     paginator: MatPaginator;
@@ -27,7 +27,7 @@ export class ClientsPFComponent implements OnInit
     @ViewChild(MatSort)
     sort: MatSort;
 
-    @ViewChild('filter')
+    @ViewChild("filter")
     filter: ElementRef;
 
     // Private
@@ -51,7 +51,7 @@ export class ClientsPFComponent implements OnInit
     ngOnInit(): void
     {
         this.dataSource = new FilesDataSource(this._clientsPFService, this.paginator, this.sort);
-        fromEvent(this.filter.nativeElement, 'keyup')
+        fromEvent(this.filter.nativeElement, "keyup")
             .pipe(
                 takeUntil(this._unsubscribeAll),
                 debounceTime(150),
@@ -70,8 +70,8 @@ export class ClientsPFComponent implements OnInit
 
 export class FilesDataSource extends DataSource<any>
 {
-    private _filterChange = new BehaviorSubject('');
-    private _filteredDataChange = new BehaviorSubject('');
+    private _filterChange = new BehaviorSubject("");
+    private _filteredDataChange = new BehaviorSubject("");
 
     /**
      * Constructor
@@ -174,33 +174,33 @@ export class FilesDataSource extends DataSource<any>
      */
     sortData(data): any[]
     {
-        if ( !this._matSort.active || this._matSort.direction === '' )
+        if ( !this._matSort.active || this._matSort.direction === "" )
         {
             return data;
         }
 
         return data.sort((a, b) => {
-            let propertyA: number | string = '';
-            let propertyB: number | string = '';
+            let propertyA: number | string = "";
+            let propertyB: number | string = "";
 
             switch ( this._matSort.active )
             {
-                case 'id':
+                case "id":
                     [propertyA, propertyB] = [a.id, b.id];
                     break;
-                case 'name':
+                case "name":
                     [propertyA, propertyB] = [a.name, b.name];
                     break;
-                case 'categories':
+                case "categories":
                     [propertyA, propertyB] = [a.categories[0], b.categories[0]];
                     break;
-                case 'price':
+                case "price":
                     [propertyA, propertyB] = [a.priceTaxIncl, b.priceTaxIncl];
                     break;
-                case 'quantity':
+                case "quantity":
                     [propertyA, propertyB] = [a.quantity, b.quantity];
                     break;
-                case 'active':
+                case "active":
                     [propertyA, propertyB] = [a.active, b.active];
                     break;
             }
@@ -208,7 +208,7 @@ export class FilesDataSource extends DataSource<any>
             const valueA = isNaN(+propertyA) ? propertyA : +propertyA;
             const valueB = isNaN(+propertyB) ? propertyB : +propertyB;
 
-            return (valueA < valueB ? -1 : 1) * (this._matSort.direction === 'asc' ? 1 : -1);
+            return (valueA < valueB ? -1 : 1) * (this._matSort.direction === "asc" ? 1 : -1);
         });
     }
 
